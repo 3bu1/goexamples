@@ -24,12 +24,38 @@ func main() {
 	// st.push(1992)
 	// fmt.Println("st.pop() ", st.pop())
 	// st.displayAll()
-	st := &StackLinkedListack{}
-	st.push(10)
-	st.push(20)
-	st.push(30)
-	st.push(40)
-	st.pop()
-	st.pop()
-	st.DisplayLL()
+	// st := &StackLinkedListack{}
+	// st.push(10)
+	// st.push(20)
+	// st.push(30)
+	// st.push(40)
+	// st.pop()
+	// st.pop()
+	// st.DisplayLL()
+
+	// q := Lqueue{}
+	// q.enLqueue(10)
+	// q.enLqueue(20)
+	// q.enLqueue(30)
+	// if front, err := q.peek(); err == nil {
+	// 	fmt.Println("front ", front)
+	// }
+
+	// Create a sample tree
+	root := &TreeNode{Value: 1}
+	root.Children = []*TreeNode{
+		{Value: 2, Children: []*TreeNode{
+			{Value: 4},
+			{Value: 5},
+			{Value: 8},
+		}},
+		{Value: 9},
+		{Value: 3, Children: []*TreeNode{
+			{Value: 6},
+			{Value: 7},
+		}},
+	}
+
+	// Perform BFS on the tree
+	BFS(root)
 }
